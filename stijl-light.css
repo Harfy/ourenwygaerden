@@ -1,0 +1,28 @@
+body {
+	background-color: #FBF5D1;
+}
+
+h1, p {
+	color: #363534;
+}
+a p{
+	color: black;
+}
+a {
+	color: black;
+}
+
+.highlight p {
+	color: #FBF5D1;
+}
+.sidediv {
+	background-color: #B3ECE6;
+}
+.wolkbol {
+  background-color:#1E2841;
+}
+.wolkbase {
+  width: 9rem;
+  height: 2.5rem;
+  background-color: #1E2841;
+}

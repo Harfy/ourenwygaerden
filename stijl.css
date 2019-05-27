@@ -1,0 +1,251 @@
+body {
+  background-color: #1E2841;
+  font-family: Arial;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 95vw;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+.topnav {
+  width: 6rem;
+  background-color: black;
+  color: white;
+  padding-bottom: .5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: .5rem;
+
+}
+nav a {
+  color: #FBF5D1;
+  text-decoration: none;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+nav h2 {
+  padding-left: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-weight: 600;
+}
+h2:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+h2:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.algemeen {
+  height: .5rem;
+  width: 3rem;
+  background-color: #FBF5D1;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: .1rem;
+  padding-right: .1rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10rem;
+  position: relative;
+  grid-column: 1/3;
+  grid-row: 2;
+}
+.slider {
+  background-color: black;
+  width: 0;
+  height: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10rem;
+  position: absolute;
+  transition-property: all;
+  transition-duration: .5s;
+  }
+.onzichtbaar {
+    display: none;
+  }
+.light {
+    right: .3rem;
+    top: .25rem;
+  }
+.dark {
+    left: .3rem;
+    top: .25rem;
+  }
+.klikbaar {
+  width: 1rem;
+  height: 1rem;
+}
+.sidemenu {
+  background-image: linear-gradient(#C7847C,#FBF5D1);
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0rem;
+  right: 0rem;
+  overflow: hidden;
+  transition-property: all;
+  transition-duration: 1s;
+  z-index: 899;
+}
+.sidemenu a {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+.zichtbaarmenu {
+  width: 25vw;
+  padding: 2rem 2rem 2rem;
+}
+main {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+
+}
+a img {
+  max-width: 100%;
+  margin-bottom: .5rem;
+}
+
+a {
+  color: #FBF5D1;
+  font-size: 1rem;
+  text-decoration: none;
+  break-inside: avoid;
+  display: block;
+  margin-bottom: 2rem;
+}
+.menu {
+  position: fixed;
+  top: 1.5rem;
+  right: 1rem;
+  z-index: 900;
+}
+.klein{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.groter {
+  width: 35vw;
+  max-width: 500px;
+}
+.sidediv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color:#372B41;
+  z-index: 1;
+  transition-property: all;
+  transition-duration: .5s;
+  overflow: hidden;
+}
+.wolkbol {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color:#FBF5D1 ;
+  grid-row: 1;
+  position: relative;
+  bottom: 0rem;
+  transition-property: all;
+  transition-duration: .5s;
+}
+.een {
+  position: relative;
+  left: 1.5rem;
+  bottom: -0.2rem;
+}
+.twee {
+  width: 4.5rem;
+  height: 4.5rem;
+  position: relative;
+  left: -2rem;;
+  bottom: 0.5rem;
+}
+.wolkbase {
+  width: 9rem;
+  height: 2.5rem;
+  background-color: #FBF5D1;
+  border-radius: 10rem;
+  grid-row: 2;
+  grid-column: 1/5;
+  position: relative;
+  top: -2.8rem;
+  transition-property: all;
+  transition-duration: .5s;
+}
+.wolk {
+  width: 16rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  position: fixed;
+  top: 1rem;
+  animation-name: windy;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  z-index: 500;
+  transition-property: all;
+  transition-duration: .5s;
+}
+.wolk:hover {
+  top: -4rem;
+}
+@keyframes windy {
+  0% {
+    transform: translate(-50vw);
+  }
+  100%{
+    transform: translate(120vw);
+  }
+}
+@media (min-width: 800px) {
+  main {
+    column-count: 2;
+    margin-left: 50vw;
+  }
+  a {
+    width: 15vw;
+  }
+  .menu {
+    width: auto;
+  }
+  .sidediv {
+    width: 40vw;
+    padding-top: 10rem;
+    padding-left: 5rem;
+  }
+  .topnav {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 5;
+  }
+  .aangeduid {
+    border: .5rem solid #FBF5D1;
+  }
+  .showreel {
+    transition-property: all;
+    transition-duration: .5s;
+  }
+}
+@media (min-width: 1100px) {
+  main {
+    column-count: 3;
+    grid-gap: 1vw;
+  }
+  a{
+    width: 10vw;
+  }
+}
